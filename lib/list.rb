@@ -6,4 +6,8 @@ class List
   def name
     @name
   end
+
+  def ==(another_list)
+    self.name == another_list.name
+  end
 end
