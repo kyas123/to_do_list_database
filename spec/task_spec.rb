@@ -5,4 +5,9 @@ describe Task do
     task = Task.new('learn SQL')
     expect(task).to be_an_instance_of Task
   end
+
+  it 'tells you its name' do
+    task = Task.new('learn SQL')
+    expect(task.name).to eq 'learn SQL'
+  end
 end
