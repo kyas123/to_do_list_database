@@ -10,4 +10,8 @@ describe Task do
     task = Task.new('learn SQL')
     expect(task.name).to eq 'learn SQL'
   end
+
+  it 'starts with no tasks' do
+    expect(Task.all).to eq []
+  end
 end
