@@ -30,9 +30,15 @@ describe List do
     expect(List.all).to eq []
   end
 
-  it'lets you save lists to the database' do
+  it 'lets you save lists to the database' do
     list = List.new('Epicodus stuff')
     list.save
     expect(List.all).to eq [list]
+  end
+
+  it 'sets its ID when you save it' do
+    list = List.new('Epicodus stuff')
+    list.save
+    expect(list.id).to be_an_instance_of Fixnum
   end
 end
