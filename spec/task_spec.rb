@@ -14,4 +14,16 @@ describe Task do
   it 'starts with no tasks' do
     expect(Task.all).to eq []
   end
+
+  it 'lets you save tasks to the database' do
+    task = Task.new('learn SQL')
+    task.save
+    expect(Task.all).to eq [task]
+  end
+
+  it 'is the same task if it has the same name' do
+    task1 = Task.new('learn SQL')
+    task2 = Task.new('learn SQL')
+    expect(task1).to eq task2
+  end
 end
